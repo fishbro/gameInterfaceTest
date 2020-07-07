@@ -4,4 +4,19 @@ body{
   height: 100%;
   padding: 0;
   margin: 0;
+  font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
+  overflow: hidden;
 }
+
+ul, ol{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+@import "base";
+@import "action-bar";

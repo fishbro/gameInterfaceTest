@@ -8,11 +8,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
   </head>
   <body>
-    @@include('./parts/top.html')
+    <div class="screen">
 
-    <div class="screen">Hello world!</div>
+      @@include('./parts/top.html')
 
-    @@include('./parts/bottom.html')
+      <div class="battle-view">
+        <!-- place for battle view -->
+      </div>
+
+      @@include('./parts/bottom.html')
+
+    </div>
 
     <script src="./js/main.js"></script>
   </body>

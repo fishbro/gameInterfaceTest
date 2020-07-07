@@ -1,0 +1,66 @@
+.action-bar{
+  width: 1278px;
+  display: grid;
+  grid-template-areas:
+    "active-spells"
+    "control-center";
+  grid-template-rows: 1fr 247px;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  position: relative;
+  left: -16px;
+
+  .active-spells {
+
+  }
+  .control-center{
+    background-image: url("/img/arction-bar__bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    display: grid;
+    grid-template-areas:
+    "empty-l"
+    "left-side-params"
+    "heroes-info"
+    "right-side-params"
+    "empty-r";
+    grid-template-rows: 1fr;
+    grid-template-columns: 85px 160px 1fr 155px 80px;
+  }
+}
+
+.active-spells{
+  ul{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 14px;
+    left: 12px;
+  }
+  li a{
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 5.5px;
+    border-radius: 100%;
+    background-color: #262523;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.control-center{
+  .left-side-params{
+    grid-area: left-side-params;
+  }
+  .heroes-info{
+    grid-area: heroes-info;
+  }
+  .right-side-params{
+    grid-area: right-side-params;
+  }
+}
