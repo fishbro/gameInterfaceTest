@@ -1,19 +1,22 @@
+@import 'variables';
+
 .action-bar{
-  width: 1278px;
+  width: 100%;
   display: grid;
   grid-template-areas:
-    "active-spells"
-    "control-center";
-  grid-template-rows: 1fr 247px;
-  grid-template-columns: 1fr;
+    "left-side active-spells right-side"
+    "left-side control-center right-side";
+  grid-template-rows: 1fr 247px*$multiplier;
+  grid-template-columns: 1fr 1278px*$multiplier 1fr;
   margin: 0 auto;
   position: relative;
-  left: -16px;
+  left: -16px*$multiplier;
 
   .active-spells {
-
+    grid-area: active-spells;
   }
   .control-center{
+    grid-area: control-center;
     background-image: url("/img/arction-bar__bg.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -21,13 +24,14 @@
 
     display: grid;
     grid-template-areas:
-    "empty-l"
-    "left-side-params"
-    "heroes-info"
-    "right-side-params"
-    "empty-r";
+    "empty-l left center right empty-r";
     grid-template-rows: 1fr;
-    grid-template-columns: 85px 160px 1fr 155px 80px;
+    grid-template-columns:
+            85px*$multiplier
+            141px*$multiplier
+            1fr
+            164px*$multiplier
+            62px*$multiplier;
   }
 }
 
@@ -36,31 +40,162 @@
     display: flex;
     justify-content: center;
     position: relative;
-    top: 14px;
-    left: 12px;
+    top: 14px*$multiplier;
+    left: 12px*$multiplier;
   }
   li a{
     display: block;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    margin: 0 5.5px;
+    width: 60px*$multiplier;
+    height: 60px*$multiplier;
+    line-height: 66px*$multiplier;
+    margin: 0 5.5px*$multiplier;
     border-radius: 100%;
     background-color: #262523;
     color: #fff;
     text-align: center;
-    font-weight: bold;
   }
 }
 
 .control-center{
-  .left-side-params{
-    grid-area: left-side-params;
+  .side-stats__left{
+    grid-area: left;
+    text-align: right;
   }
-  .heroes-info{
-    grid-area: heroes-info;
+  .side-stats__right{
+    grid-area: right;
+    text-align: left;
   }
-  .right-side-params{
-    grid-area: right-side-params;
+  .side-stats{
+    ul{
+      margin-top: 35px*$multiplier;
+    }
+    li{
+      display: flex;
+
+      & + li{
+        margin-top: 6px*$multiplier;
+      }
+    }
+    .icon{
+      font-size: .6rem;
+      line-height: 1.5em;
+      color: #1b6e9a;
+      text-align: center;
+      margin: 0 3px*$multiplier;
+
+      i{
+        display: block;
+        width: 30px*$multiplier;
+        height: 30px*$multiplier;
+      }
+    }
+    .main{
+      font-size: 1.4rem;
+      color: #fff;
+    }
+    .plus{
+      font-size: 1.1rem;
+      line-height: 1.2em;
+      color: #00a02c;
+    }
+  }
+  .side-stats__left li{
+    flex-direction: row-reverse;
+  }
+
+  .center-stats{
+    grid-area: center;
+
+    display: grid;
+    grid-template-areas:
+    "mhr exp"
+    "mhr shr"
+    "acl acl";
+    grid-template-rows: 23px*$multiplier 1fr 25px*$multiplier;
+    grid-template-columns: 115px*$multiplier 1fr;
+    margin: 28px*$multiplier 10px*$multiplier 6px*$multiplier 20px*$multiplier;
+  }
+
+  .main-hero{
+    grid-area: mhr;
+    padding: 0 7px*$multiplier 7px*$multiplier 0;
+  }
+  .exp-bar{
+    grid-area: exp;
+  }
+  .second-heroes{
+    grid-area: shr;
+    display: flex;
+    padding: 7px*$multiplier 0 7px*$multiplier;
+  }
+  .accelerators{
+    grid-area: acl;
+  }
+}
+
+.accelerators{
+  ul{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px*$multiplier;
+  }
+  li{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-right: 7px*$multiplier;
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+  a{
+    background: #3f4558;
+    color: #000000;
+    display: block;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.7em;
+
+    transition: all .3s;
+
+    &.active,
+    &:hover{
+      color: #ffbd00;
+      background: #000;
+    }
+
+    small{
+      font-size: .8rem;
+    }
+  }
+}
+
+.character{
+  height: 100%;
+  width: 100%;
+  margin-right: 7px*$multiplier;
+  border-radius: 12px*$multiplier;
+  background: #3f4558;
+  overflow: hidden;
+
+  transition: all .3s;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  &.active,
+  &:hover{
+    box-shadow: 0px 1px 1px 1px #fff,
+                0px -1px 1px 1px #fff,
+          inset 0px 0px 1px 1px #FFF,
+          inset 1px 0px 1px 1px #FFF,
+          inset -1px 0px 1px 1px #FFF,
+                0px 0px 6px 0px #FFF,
+          inset 0px 0px 8px 0px #FFF;
   }
 }

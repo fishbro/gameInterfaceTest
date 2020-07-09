@@ -1,11 +1,15 @@
+@import 'variables';
+
 html,
 body{
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: 'RBNo3.1',HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
   overflow: hidden;
+  font-weight: 600;
+  font-size: 18px*$multiplier;
 }
 
 ul, ol{
