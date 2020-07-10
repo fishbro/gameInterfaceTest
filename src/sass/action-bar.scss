@@ -47,7 +47,7 @@
     display: block;
     width: 60px*$multiplier;
     height: 60px*$multiplier;
-    line-height: 66px*$multiplier;
+    line-height: 60px*$multiplier;
     margin: 0 5.5px*$multiplier;
     border-radius: 100%;
     background-color: #262523;
@@ -67,7 +67,7 @@
   }
   .side-stats{
     ul{
-      margin-top: 35px*$multiplier;
+      margin-top: 30px*$multiplier;
     }
     li{
       display: flex;
@@ -87,10 +87,12 @@
         display: block;
         width: 30px*$multiplier;
         height: 30px*$multiplier;
+        margin-top: 3px*$multiplier;
       }
     }
     .main{
       font-size: 1.4rem;
+      line-height: 1em;
       color: #fff;
     }
     .plus{
@@ -157,8 +159,8 @@
     text-align: center;
     height: 100%;
     width: 100%;
-    font-size: 1rem;
-    line-height: 1.7em;
+    font-size: 1.1rem;
+    line-height: 1.1em;
 
     transition: all .3s;
 
@@ -169,7 +171,7 @@
     }
 
     small{
-      font-size: .8rem;
+      font-size: .9rem;
     }
   }
 }
@@ -179,7 +181,10 @@
   width: 100%;
   margin-right: 7px*$multiplier;
   border-radius: 12px*$multiplier;
-  background: #3f4558;
+  background-image: url('../img/ch__empty.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 
   transition: all .3s;

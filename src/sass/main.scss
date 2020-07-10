@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'fonts';
 
 html,
 body{
@@ -8,7 +9,7 @@ body{
   margin: 0;
   font-family: 'RBNo3.1',HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
   overflow: hidden;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px*$multiplier;
 }
 
