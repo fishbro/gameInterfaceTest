@@ -17,7 +17,7 @@
   }
   .control-center{
     grid-area: control-center;
-    background-image: url("/img/arction-bar__bg.png");
+    background-image: url("../img/action-bar__bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -57,53 +57,6 @@
 }
 
 .control-center{
-  .side-stats__left{
-    grid-area: left;
-    text-align: right;
-  }
-  .side-stats__right{
-    grid-area: right;
-    text-align: left;
-  }
-  .side-stats{
-    ul{
-      margin-top: 30px*$multiplier;
-    }
-    li{
-      display: flex;
-
-      & + li{
-        margin-top: 6px*$multiplier;
-      }
-    }
-    .icon{
-      font-size: .6rem;
-      line-height: 1.5em;
-      color: #1b6e9a;
-      text-align: center;
-      margin: 0 3px*$multiplier;
-
-      i{
-        display: block;
-        width: 30px*$multiplier;
-        height: 30px*$multiplier;
-        margin-top: 3px*$multiplier;
-      }
-    }
-    .main{
-      font-size: 1.4rem;
-      line-height: 1em;
-      color: #fff;
-    }
-    .plus{
-      font-size: 1.1rem;
-      line-height: 1.2em;
-      color: #00a02c;
-    }
-  }
-  .side-stats__left li{
-    flex-direction: row-reverse;
-  }
 
   .center-stats{
     grid-area: center;

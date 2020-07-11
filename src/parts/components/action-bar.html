@@ -9,26 +9,20 @@
   <div class="control-center">
     <div class="side-stats side-stats__left">
       <ul>
-        <li>
-          <div class="icon">
-            <i>icon</i>
-            <div>DPC</div>
-          </div>
-          <div class="value">
-            <div class="main">53,25M</div>
-            <div class="plus">+17M%</div>
-          </div>
-        </li>
-        <li>
-          <div class="icon">
-            <i>icon</i>
-            <div>DPS</div>
-          </div>
-          <div class="value">
-            <div class="main">1,853B</div>
-            <div class="plus">+10,7K%</div>
-          </div>
-        </li>
+        @@loop('./side-stats.html', [
+          {
+            "type": "DPC",
+            "icon": "./img/icon__dpc.png" ,
+            "main": "53,25M",
+            "plus": "+17M%"
+          },
+          {
+            "type": "DPS",
+            "icon": "./img/icon__dps.png" ,
+            "main": "1,853B",
+            "plus": "+10,7K%"
+          },
+        ])
       </ul>
     </div>
     <div class="center-stats">
@@ -106,16 +100,14 @@
     </div>
     <div class="side-stats side-stats__right">
       <ul>
-        <li>
-          <div class="icon">
-            <i>icon</i>
-            <div>AP</div>
-          </div>
-          <div class="value">
-            <div class="main">15,32K</div>
-            <div class="plus">+52M%</div>
-          </div>
-        </li>
+        @@loop('./side-stats.html', [
+          {
+            "type": "AP",
+            "icon": "./img/icon__ap.png" ,
+            "main": "15,32K",
+            "plus": "+52M%"
+          }
+        ])
         <li>
 
         </li>
