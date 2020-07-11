@@ -33,11 +33,13 @@
     </div>
     <div class="center-stats">
       <div class="main-hero">
-        <div class="character">
-          <div class="ava"></div>
-          <div class="stats"></div>
-          <div class="exp"></div>
-        </div>
+          @@include('./character.html', {
+            'class': 'main',
+            'img': './img/main-character.png',
+            'lvl': '999',
+            'multiplier': '10',
+            'exp': '655,555'
+          })
       </div>
       <div class="exp-bar"></div>
       <div class="accelerators">
@@ -52,36 +54,54 @@
         </ul>
       </div>
       <div class="second-heroes">
-        <div class="character">
-          <div class="ava"></div>
-          <div class="stats"></div>
-          <div class="exp"></div>
-        </div>
-        <div class="character">
-          <div class="ava"></div>
-          <div class="stats"></div>
-          <div class="exp"></div>
-        </div>
-        <div class="character">
-          <div class="ava"></div>
-          <div class="stats"></div>
-          <div class="exp"></div>
-        </div>
-        <div class="character active">
-          <div class="ava"></div>
-          <div class="stats"></div>
-          <div class="exp"></div>
-        </div>
-        <div class="character">
-          <div class="ava"></div>
-          <div class="stats"></div>
-          <div class="exp"></div>
-        </div>
-        <div class="character">
-          <div class="ava"></div>
-          <div class="stats"></div>
-          <div class="exp"></div>
-        </div>
+        @@include('./character.html', {
+          'class': '',
+          'img': './img/character__1.png',
+          'ability': './img/ability__2.png',
+          'lvl': '553',
+          'multiplier': '10',
+          'exp': '265,487',
+        })
+        @@include('./character.html', {
+          'class': '',
+          'img': './img/character__2.png',
+          'ability': './img/ability__3.png',
+          'lvl': '135',
+          'multiplier': '10',
+          'exp': '105,381',
+        })
+        @@include('./character.html', {
+          'class': '',
+          'img': './img/character__3.png',
+          'ability': './img/ability__4.png',
+          'lvl': '25',
+          'multiplier': '10',
+          'exp': '1,257',
+        })
+        @@include('./character.html', {
+          'class': '',
+          'img': './img/character__4.png',
+          'ability': './img/ability__1.png',
+          'lvl': '998',
+          'multiplier': '10',
+          'exp': '655,555',
+        })
+        @@include('./character.html', {
+          'class': '',
+          'img': './img/character__5.png',
+          'ability': './img/ability__5.png',
+          'lvl': '523',
+          'multiplier': '10',
+          'exp': '117,063',
+        })
+        @@include('./character.html', {
+        'class': 'disabled',
+        'img': '',
+        'ability': '',
+        'lvl': '',
+        'multiplier': '',
+        'exp': '',
+        })
       </div>
     </div>
     <div class="side-stats side-stats__right">

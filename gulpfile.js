@@ -61,7 +61,10 @@ gulp.task('html', function(){
   return gulp.src([path.src.html])
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: '@file'
+      basepath: '@file',
+      context: {
+        name: 'game'
+      }
     }))
     .pipe(gulp.dest(path.build.html))
     .pipe(connect.reload()); //И перезагрузим наш сервер для обновлений

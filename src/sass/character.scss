@@ -1,0 +1,176 @@
+@import 'variables';
+
+.character{
+  height: 100%;
+  width: 100%;
+  margin-right: 7px*$multiplier;
+  border-radius: 12px*$multiplier;
+  background-image: url('../img/ch__empty.png');
+  box-shadow: 0px 3px 0px 0px #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &.disabled{
+    pointer-events: none;
+  }
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  &:before{
+    counter-increment: heroes;
+    content: counter(heroes);
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: .5rem;
+    text-align: center;
+    background-image: url("../img/character-counter__bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:after{
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px*$multiplier;
+
+    transition: box-shadow .3s;
+  }
+
+  .wrapper{
+    display: grid;
+    grid-template-areas:
+      "image"
+      "stats"
+      "exp";
+
+    grid-template-rows: 1fr 20px*$multiplier 32px*$multiplier;
+    grid-template-columns: 1fr;
+    height: 100%;
+    width: 100%;
+
+    &> div{
+      width: 100%;
+    }
+  }
+  .ava{
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px*$multiplier 12px*$multiplier 0 0;
+  }
+  .stats{
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    color: #ff6300;
+    font-size: 1.05rem;
+    line-height: 1em;
+
+    .mltp{
+      color: #ff22ba;
+      font-size: .8rem;
+      line-height: 1.4em;
+    }
+
+    &>div{
+      padding: 0 5%;
+    }
+  }
+  .exp{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 0 12px*$multiplier 12px*$multiplier;
+    background: #a5aeb8;
+    box-shadow: inset 0 15px*$multiplier 0 0 #b2bac2;
+    font-size: .9rem;
+    line-height: .9em;
+    padding: 0 6%;
+    box-sizing: border-box;
+    
+    .label{
+      color: #686d8b;
+    }
+  }
+
+  .ability{
+    width: 45px*$multiplier;
+    height: 45px*$multiplier;
+    background: #000;
+    border-radius: 100%;
+
+    position: absolute;
+    top: -4px*$multiplier;
+    right: -4px*$multiplier;
+    z-index: 1;
+
+    transition: all .3s;
+
+    .img{
+      position: absolute;
+      top: 2px*$multiplier;
+      right: 2px*$multiplier;
+      bottom: 2px*$multiplier;
+      left: 2px*$multiplier;
+      border-radius: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      transition: box-shadow .3s;
+    }
+  }
+
+  &.active:after,
+  &:hover:after{
+    box-shadow: 0px 1px 1px 1px #fff,
+    0px -1px 1px 1px #fff,
+    inset 0px 0px 1px 1px #FFF,
+    inset 1px 0px 1px 1px #FFF,
+    inset -1px 0px 1px 1px #FFF,
+    0px 0px 6px 0px #FFF,
+    inset 0px 0px 8px 0px #FFF;
+  }
+
+  &.active .ability,
+  &:hover .ability{
+    top: -6px*$multiplier;
+    background: #fff;
+    box-shadow: 0 0 3px 0 #FFF, 0 2px 1px -1px #000;
+  }
+
+  &.main{
+    background-image: url('../img/main-character__bg.png');
+
+    .ability,
+    &:before,
+    &:after{
+      display: none;
+    }
+    .ava{
+      background-size: contain;
+      height: 112%;
+      width: 106%;
+      border-radius: 0;
+      margin: -13% 0% 0% -6%;
+    }
+    .exp{
+      background: #feae00;
+      box-shadow: none;
+    }
+  }
+}

@@ -129,6 +129,7 @@
     grid-area: shr;
     display: flex;
     padding: 7px*$multiplier 0 7px*$multiplier;
+    counter-reset: heroes;
   }
   .accelerators{
     grid-area: acl;
@@ -173,34 +174,5 @@
     small{
       font-size: .9rem;
     }
-  }
-}
-
-.character{
-  height: 100%;
-  width: 100%;
-  margin-right: 7px*$multiplier;
-  border-radius: 12px*$multiplier;
-  background-image: url('../img/ch__empty.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-
-  transition: all .3s;
-
-  &:last-child{
-    margin-right: 0;
-  }
-
-  &.active,
-  &:hover{
-    box-shadow: 0px 1px 1px 1px #fff,
-                0px -1px 1px 1px #fff,
-          inset 0px 0px 1px 1px #FFF,
-          inset 1px 0px 1px 1px #FFF,
-          inset -1px 0px 1px 1px #FFF,
-                0px 0px 6px 0px #FFF,
-          inset 0px 0px 8px 0px #FFF;
   }
 }
