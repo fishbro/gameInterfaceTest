@@ -1,9 +1,23 @@
 <div class="action-bar">
   <div class="active-spells">
     <ul>
-      <li><a href=""></a></li>
-      <li><a href="">2:13</a></li>
-      <li><a href="">55</a></li>
+      @@loop('./spell.html', [
+        {
+          "img": "./img/ability__1.png" ,
+          "percent": "101",
+          "left": ""
+        },
+        {
+          "img": "./img/ability__6.png" ,
+          "percent": "47",
+          "left": "2:13"
+        },
+        {
+          "img": "./img/ability__2.png" ,
+          "percent": "60",
+          "left": "55"
+        },
+      ])
     </ul>
   </div>
   <div class="control-center">

@@ -35,27 +35,6 @@
   }
 }
 
-.active-spells{
-  ul{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 14px*$multiplier;
-    left: 12px*$multiplier;
-  }
-  li a{
-    display: block;
-    width: 60px*$multiplier;
-    height: 60px*$multiplier;
-    line-height: 60px*$multiplier;
-    margin: 0 5.5px*$multiplier;
-    border-radius: 100%;
-    background-color: #262523;
-    color: #fff;
-    text-align: center;
-  }
-}
-
 .control-center{
 
   .center-stats{
