@@ -8,7 +8,7 @@
     top: 14px*$multiplier;
     left: 12px*$multiplier;
   }
-  li a{
+  li{
     display: block;
     width: 60px*$multiplier;
     height: 60px*$multiplier;
@@ -29,7 +29,7 @@
   .pie circle {
     fill: none;
     stroke: #fff;
-    stroke-width: 64;
+    stroke-width: 32*$multiplier;
   }
 
   .data{
@@ -38,7 +38,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 4px;
+    padding: 4px*$multiplier;
     box-sizing: border-box;
 
     .img{

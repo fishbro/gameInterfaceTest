@@ -1,0 +1,138 @@
+@import 'variables';
+
+.bottom-buttons{
+  position: fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  height:0;
+
+  & > div{
+    position: absolute;
+    bottom: 10px*$multiplier;
+    display: flex;
+
+    &.left-side{
+      left: 0;
+    }
+    &.right-side{
+      right: 0;
+    }
+  }
+
+  .button{
+    background-color: rgba(0,0,0,.5);
+    margin-left: 22px*$multiplier;
+    border-radius: 12px*$multiplier;
+    position: relative;
+    cursor: pointer;
+
+    .label{
+      line-height: 1.3em;
+      color: #ff9000;
+      padding: 8px*$multiplier 16px*$multiplier;
+
+      &:after{
+        content: "";
+        display: block;
+        background-image: url("../img/icon__shadow.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+
+        transition: left .3s, width .3s;
+      }
+    }
+    .icon{
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+
+      transition: bottom .3s;
+    }
+
+    &.inventory{
+      .icon{
+        width: 114px*$multiplier;
+        height: 95px*$multiplier;
+        margin-left: -58px*$multiplier;
+        margin-bottom: -5px*$multiplier;
+      }
+
+      .label:after{
+        width: 86%;
+        height: 10px*$multiplier;
+        top: -1px*$multiplier;
+        left: 8%;
+      }
+    }
+
+    &.elixirs{
+      .icon {
+        width: 62px*$multiplier;
+        height: 71px*$multiplier;
+        margin-left: -36px*$multiplier;
+        margin-bottom: -8px*$multiplier;
+      }
+
+      .label:after{
+        width: 62%;
+        height: 10px*$multiplier;
+        top: -1px*$multiplier;
+        left: 17%;
+      }
+    }
+
+    &.shop{
+      margin-right: 22px*$multiplier;
+
+      .icon{
+        width: 119px*$multiplier;
+        height: 80px*$multiplier;
+        margin-left: -65px*$multiplier;
+        margin-bottom: -2px*$multiplier;
+      }
+      .label{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        line-height: 1em;
+        padding: 4px*$multiplier 16px*$multiplier 8px*$multiplier;
+
+        &:after {
+          background: none;
+          position: absolute;
+          display: block;
+          content: attr(data-text);
+          top: 0;
+          left: 0;
+          height: 38%;
+          width: 100%;
+          overflow: hidden;
+          padding: 4px*$multiplier 16px*$multiplier 0;
+          color: #ffe000;
+        }
+      }
+    }
+
+    &:not(.shop):hover{
+      .icon {
+        bottom: 110%;
+      }
+      &.inventory{
+        .label:after{
+          width: 70%;
+          left: 16%;
+        }
+      }
+      &.elixirs{
+        .label:after{
+          width: 46%;
+          left: 25%;
+        }
+      }
+    }
+  }
+}
