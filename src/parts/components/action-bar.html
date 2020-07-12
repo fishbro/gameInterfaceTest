@@ -27,15 +27,21 @@
     </div>
     <div class="center-stats">
       <div class="main-hero">
-          @@include('./character.html', {
-            'class': 'main',
-            'img': './img/main-character.png',
-            'lvl': '999',
-            'multiplier': '10',
-            'exp': '655,555'
-          })
+        @@include('./character.html', {
+          'class': 'main',
+          'img': './img/main-character.png',
+          'lvl': '999',
+          'multiplier': '10',
+          'exp': '655,555'
+        })
       </div>
-      <div class="exp-bar"></div>
+      <div class="hp-bar">
+        @@include('./hp-bar.html', {
+          "percent": "32",
+          "val": "62,153",
+          "from": "254,150"
+        })
+      </div>
       <div class="accelerators">
         <ul>
           <li><a href="#">X1</a></li>

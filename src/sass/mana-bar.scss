@@ -1,6 +1,6 @@
 @import 'variables';
 
-.progress-wrapper{
+.mana.progress-wrapper{
   margin-left: -3px*$multiplier;
   flex-direction: column;
 
@@ -10,52 +10,54 @@
     color: #ff76ff;
   }
 }
-.progress{
-  height: 34px*$multiplier;
-  width: 100%;
-  margin-top: 1px*$multiplier;
-  background: #000;
-  border-radius: 18px*$multiplier;
-  overflow: hidden;
-  position: relative;
-
-  .bar{
-    height: 100%;
-    background: rgb(63,0,76);
-    background: linear-gradient(90deg, rgba(63,0,76,1) 0%, rgba(79,0,93,1) 50%, rgba(143,0,159,1) 100%);
-  }
-
-  .val{
-    color: #fff;
+.mana{
+  .progress{
+    height: 34px*$multiplier;
     width: 100%;
-    height: 100%;
-    display: flex;
-    background-image: url("../img/mana__bar.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 73%;
-    padding-left: 12px*$multiplier;
+    margin-top: 1px*$multiplier;
+    background: #000;
     border-radius: 18px*$multiplier;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    top: 0;
+    overflow: hidden;
+    position: relative;
 
-    box-shadow: inset 0px 1px 0px 1px rgba(0, 0, 0, 0.25);
-
-    i{
-      display: block;
-      width: 20px*$multiplier;
+    .bar{
       height: 100%;
-      background-size: 20px*$multiplier;
-      background-repeat: no-repeat;
-      background-position: center;
+      background: rgb(63,0,76);
+      background: linear-gradient(90deg, rgba(63,0,76,1) 0%, rgba(79,0,93,1) 50%, rgba(143,0,159,1) 100%);
     }
 
-    div{
-      margin-left: 8px*$multiplier;
-      font-size: 1.4rem;
-      line-height: 1.15em;
+    .val{
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background-image: url("../img/mana__bar.png");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: 100% 73%;
+      padding-left: 12px*$multiplier;
+      border-radius: 18px*$multiplier;
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      box-shadow: inset 0px 1px 0px 1px rgba(0, 0, 0, 0.25);
+
+      i{
+        display: block;
+        width: 20px*$multiplier;
+        height: 100%;
+        background-size: 20px*$multiplier;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      div{
+        margin-left: 8px*$multiplier;
+        font-size: 1.4rem;
+        line-height: 1.15em;
+      }
     }
   }
 }

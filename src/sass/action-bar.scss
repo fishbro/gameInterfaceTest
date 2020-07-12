@@ -63,7 +63,7 @@
 
     display: grid;
     grid-template-areas:
-    "mhr exp"
+    "mhr hpb"
     "mhr shr"
     "acl acl";
     grid-template-rows: 23px*$multiplier 1fr 25px*$multiplier;
@@ -75,8 +75,8 @@
     grid-area: mhr;
     padding: 0 7px*$multiplier 7px*$multiplier 0;
   }
-  .exp-bar{
-    grid-area: exp;
+  .hp-bar{
+    grid-area: hpb;
   }
   .second-heroes{
     grid-area: shr;
