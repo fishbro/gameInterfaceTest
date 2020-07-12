@@ -8,7 +8,8 @@ const gulp = require('gulp'), //господин гульп
   pngquant = require('imagemin-pngquant'), //для лучшего сжатия png картинок
   rimraf = require('rimraf'), //rm -rf
   sass = require('gulp-sass'), //для scss (https://www.npmjs.com/package/gulp-sass)
-  fileinclude = require('gulp-file-include');
+  fileinclude = require('gulp-file-include'),
+  prettyHtml = require('gulp-pretty-html');
 
 sass.compiler = require('node-sass'); //компилятор для scss
 
@@ -65,6 +66,11 @@ gulp.task('html', function(){
       context: {
         name: 'game'
       }
+    }))
+    .pipe(prettyHtml({
+      indent_size: 2,
+      indent_char: ' ',
+      unformatted: ['code', 'pre', 'em', 'strong', 'span', 'i', 'b', 'br']
     }))
     .pipe(gulp.dest(path.build.html))
     .pipe(connect.reload()); //И перезагрузим наш сервер для обновлений
