@@ -10,13 +10,13 @@
 }
 .side-stats{
   ul{
-    margin-top: 30px*$multiplier;
+    margin-top: 30px*$m_mobile;
   }
   li{
     display: flex;
 
     & + li{
-      margin-top: 6px*$multiplier;
+      margin-top: 6px*$m_mobile;
     }
   }
   .icon{
@@ -24,18 +24,18 @@
     line-height: 1.5em;
     color: #1b6e9a;
     text-align: center;
-    margin: 0 3px*$multiplier;
+    margin: 0 3px*$m_mobile;
 
     i{
       display: block;
-      width: 30px*$multiplier;
-      height: 30px*$multiplier;
-      margin-top: 3px*$multiplier;
-      background-size: 26px*$multiplier;
+      width: 30px*$m_mobile;
+      height: 30px*$m_mobile;
+      margin-top: 3px*$m_mobile;
+      background-size: 26px*$m_mobile;
       background-repeat: no-repeat;
       background-position: center;
       position: relative;
-      left: 2px*$multiplier;
+      left: 2px*$m_mobile;
     }
   }
   .main{

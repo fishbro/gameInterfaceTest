@@ -9,7 +9,7 @@
 
   & > div{
     position: absolute;
-    bottom: 10px*$multiplier;
+    bottom: 10px*$m_mobile;
     display: flex;
 
     &.left-side{
@@ -22,15 +22,15 @@
 
   .button{
     background-color: rgba(0,0,0,.5);
-    margin-left: 22px*$multiplier;
-    border-radius: 12px*$multiplier;
+    margin-left: 22px*$m_mobile;
+    border-radius: 12px*$m_mobile;
     position: relative;
     cursor: pointer;
 
     .label{
       line-height: 1.3em;
       color: #ff9000;
-      padding: 8px*$multiplier 16px*$multiplier;
+      padding: 8px*$m_mobile 16px*$m_mobile;
 
       &:after{
         content: "";
@@ -56,50 +56,50 @@
 
     &.inventory{
       .icon{
-        width: 114px*$multiplier;
-        height: 95px*$multiplier;
-        margin-left: -58px*$multiplier;
-        margin-bottom: -5px*$multiplier;
+        width: 114px*$m_mobile;
+        height: 95px*$m_mobile;
+        margin-left: -58px*$m_mobile;
+        margin-bottom: -5px*$m_mobile;
       }
 
       .label:after{
         width: 86%;
-        height: 10px*$multiplier;
-        top: -1px*$multiplier;
+        height: 10px*$m_mobile;
+        top: -1px*$m_mobile;
         left: 8%;
       }
     }
 
     &.elixirs{
       .icon {
-        width: 62px*$multiplier;
-        height: 71px*$multiplier;
-        margin-left: -36px*$multiplier;
-        margin-bottom: -8px*$multiplier;
+        width: 62px*$m_mobile;
+        height: 71px*$m_mobile;
+        margin-left: -36px*$m_mobile;
+        margin-bottom: -8px*$m_mobile;
       }
 
       .label:after{
         width: 62%;
-        height: 10px*$multiplier;
-        top: -1px*$multiplier;
+        height: 10px*$m_mobile;
+        top: -1px*$m_mobile;
         left: 17%;
       }
     }
 
     &.shop{
-      margin-right: 22px*$multiplier;
+      margin-right: 22px*$m_mobile;
 
       .icon{
-        width: 119px*$multiplier;
-        height: 80px*$multiplier;
-        margin-left: -65px*$multiplier;
-        margin-bottom: -2px*$multiplier;
+        width: 119px*$m_mobile;
+        height: 80px*$m_mobile;
+        margin-left: -65px*$m_mobile;
+        margin-bottom: -2px*$m_mobile;
       }
       .label{
         text-transform: uppercase;
         font-size: 1.5rem;
         line-height: 1em;
-        padding: 4px*$multiplier 16px*$multiplier 8px*$multiplier;
+        padding: 4px*$m_mobile 16px*$m_mobile 8px*$m_mobile;
 
         &:after {
           background: none;
@@ -111,7 +111,7 @@
           height: 38%;
           width: 100%;
           overflow: hidden;
-          padding: 4px*$multiplier 16px*$multiplier 0;
+          padding: 4px*$m_mobile 16px*$m_mobile 0;
           color: #ffe000;
         }
       }

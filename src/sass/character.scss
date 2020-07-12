@@ -3,10 +3,10 @@
 .character{
   height: 100%;
   width: 100%;
-  margin-right: 7px*$multiplier;
-  border-radius: 12px*$multiplier;
+  margin-right: 7px*$m_mobile;
+  border-radius: 12px*$m_mobile;
   background-image: url('../img/ch__empty.png');
-  box-shadow: 0px 3px 0px 0px #000;
+  box-shadow: 0px 3px*$m_mobile 0px 0px #000;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -25,9 +25,9 @@
     counter-increment: heroes;
     content: counter(heroes);
     display: block;
-    width: 20px;
+    width: 20px*$m_mobile;
     height: 20px;
-    line-height: 20px;
+    line-height: 20px*$m_mobile;
     font-size: .5rem;
     text-align: center;
     background-image: url("../img/character-counter__bg.png");
@@ -48,7 +48,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 12px*$multiplier;
+    border-radius: 12px*$m_mobile;
 
     transition: box-shadow .3s;
   }
@@ -60,7 +60,7 @@
       "stats"
       "exp";
 
-    grid-template-rows: 1fr 20px*$multiplier 32px*$multiplier;
+    grid-template-rows: 1fr 20px*$m_mobile 32px*$m_mobile;
     grid-template-columns: 1fr;
     height: 100%;
     width: 100%;
@@ -73,7 +73,7 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 12px*$multiplier 12px*$multiplier 0 0;
+    border-radius: 12px*$m_mobile 12px*$m_mobile 0 0;
   }
   .stats{
     display: flex;
@@ -96,9 +96,9 @@
   .exp{
     display: flex;
     justify-content: space-between;
-    border-radius: 0 0 12px*$multiplier 12px*$multiplier;
+    border-radius: 0 0 12px*$m_mobile 12px*$m_mobile;
     background: #a5aeb8;
-    box-shadow: inset 0 15px*$multiplier 0 0 #b2bac2;
+    box-shadow: inset 0 15px*$m_mobile 0 0 #b2bac2;
     font-size: .9rem;
     line-height: .9em;
     padding: 0 6%;
@@ -110,33 +110,33 @@
 
     .icon{
       background-image: url("../img/icon__lvl-up.png");
-      width: 22px*$multiplier;
-      height: 28px*$multiplier;
-      background-size: 12px*$multiplier;
+      width: 22px*$m_mobile;
+      height: 28px*$m_mobile;
+      background-size: 12px*$m_mobile;
       background-repeat: no-repeat;
       background-position: center;
     }
   }
 
   .ability{
-    width: 45px*$multiplier;
-    height: 45px*$multiplier;
+    width: 45px*$m_mobile;
+    height: 45px*$m_mobile;
     background: #000;
     border-radius: 100%;
 
     position: absolute;
-    top: -4px*$multiplier;
-    right: -4px*$multiplier;
+    top: -4px*$m_mobile;
+    right: -4px*$m_mobile;
     z-index: 1;
 
     transition: all .3s;
 
     .img{
       position: absolute;
-      top: 2px*$multiplier;
-      right: 2px*$multiplier;
-      bottom: 2px*$multiplier;
-      left: 2px*$multiplier;
+      top: 2px*$m_mobile;
+      right: 2px*$m_mobile;
+      bottom: 2px*$m_mobile;
+      left: 2px*$m_mobile;
       border-radius: 100%;
       background-size: cover;
       background-repeat: no-repeat;
@@ -158,7 +158,7 @@
 
   &.active .ability,
   &:hover .ability{
-    top: -6px*$multiplier;
+    top: -6px*$m_mobile;
     background: #fff;
     box-shadow: 0 0 3px 0 #FFF, 0 2px 1px -1px #000;
   }

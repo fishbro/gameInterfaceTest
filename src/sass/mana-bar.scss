@@ -1,7 +1,7 @@
 @import 'variables';
 
 .mana.progress-wrapper{
-  margin-left: -3px*$multiplier;
+  margin-left: -3px*$m_mobile;
   flex-direction: column;
 
   .from{
@@ -12,11 +12,11 @@
 }
 .mana{
   .progress{
-    height: 34px*$multiplier;
+    height: 34px*$m_mobile;
     width: 100%;
-    margin-top: 1px*$multiplier;
+    margin-top: 1px*$m_mobile;
     background: #000;
-    border-radius: 18px*$multiplier;
+    border-radius: 18px*$m_mobile;
     overflow: hidden;
     position: relative;
 
@@ -35,8 +35,8 @@
       background-repeat: no-repeat;
       background-position: top;
       background-size: 100% 73%;
-      padding-left: 12px*$multiplier;
-      border-radius: 18px*$multiplier;
+      padding-left: 12px*$m_mobile;
+      border-radius: 18px*$m_mobile;
       box-sizing: border-box;
       position: absolute;
       left: 0;
@@ -46,15 +46,15 @@
 
       i{
         display: block;
-        width: 20px*$multiplier;
+        width: 20px*$m_mobile;
         height: 100%;
-        background-size: 20px*$multiplier;
+        background-size: 20px*$m_mobile;
         background-repeat: no-repeat;
         background-position: center;
       }
 
       div{
-        margin-left: 8px*$multiplier;
+        margin-left: 8px*$m_mobile;
         font-size: 1.4rem;
         line-height: 1.15em;
       }

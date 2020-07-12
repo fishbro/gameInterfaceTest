@@ -6,11 +6,11 @@
   grid-template-areas:
     "left-side active-spells right-side"
     "left-side control-center right-side";
-  grid-template-rows: 1fr 247px*$multiplier;
-  grid-template-columns: 1fr 1278px*$multiplier 1fr;
+  grid-template-rows: 1fr 247px*$m_mobile;
+  grid-template-columns: 1fr 1278px*$m_mobile 1fr;
   margin: 0 auto;
   position: relative;
-  left: -16px*$multiplier;
+  left: -16px*$m_mobile;
 
   .active-spells {
     grid-area: active-spells;
@@ -27,11 +27,11 @@
     "empty-l left center right empty-r";
     grid-template-rows: 1fr;
     grid-template-columns:
-            85px*$multiplier
-            141px*$multiplier
+            85px*$m_mobile
+            141px*$m_mobile
             1fr
-            164px*$multiplier
-            62px*$multiplier;
+            164px*$m_mobile
+            62px*$m_mobile;
   }
 }
 
@@ -45,14 +45,14 @@
     "mhr hpb"
     "mhr shr"
     "acl acl";
-    grid-template-rows: 23px*$multiplier 1fr 25px*$multiplier;
-    grid-template-columns: 115px*$multiplier 1fr;
-    margin: 28px*$multiplier 10px*$multiplier 6px*$multiplier 20px*$multiplier;
+    grid-template-rows: 23px*$m_mobile 1fr 25px*$m_mobile;
+    grid-template-columns: 115px*$m_mobile 1fr;
+    margin: 28px*$m_mobile 10px*$m_mobile 6px*$m_mobile 20px*$m_mobile;
   }
 
   .main-hero{
     grid-area: mhr;
-    padding: 0 7px*$multiplier 7px*$multiplier 0;
+    padding: 0 7px*$m_mobile 7px*$m_mobile 0;
   }
   .hp-bar{
     grid-area: hpb;
@@ -60,51 +60,10 @@
   .second-heroes{
     grid-area: shr;
     display: flex;
-    padding: 7px*$multiplier 0 7px*$multiplier;
+    padding: 7px*$m_mobile 0 7px*$m_mobile;
     counter-reset: heroes;
   }
   .accelerators{
     grid-area: acl;
-  }
-}
-
-.accelerators{
-  ul{
-    display: flex;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 12px*$multiplier;
-  }
-  li{
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin-right: 7px*$multiplier;
-
-    &:last-child{
-      margin: 0;
-    }
-  }
-  a{
-    background: #3f4558;
-    color: #000000;
-    display: block;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    font-size: 1.1rem;
-    line-height: 1.1em;
-
-    transition: all .3s;
-
-    &.active,
-    &:hover{
-      color: #ffbd00;
-      background: #000;
-    }
-
-    small{
-      font-size: .9rem;
-    }
   }
 }

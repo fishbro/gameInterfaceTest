@@ -58,13 +58,15 @@
       </div>
       <div class="accelerators">
         <ul>
-          <li><a href="#">X1</a></li>
-          <li><a class="active" href="#"><small>BUY</small> X10</a></li>
-          <li><a href="#">X50</a></li>
-          <li><a href="#">X100</a></li>
-          <li><a href="#">X250</a></li>
-          <li><a href="#">X500</a></li>
-          <li><a href="#"><small>BUY</small> ALL</a></li>
+          @@loop('./accelerator.html', [
+            {"label": "X1"},
+            {"label": "X10"},
+            {"label": "X50"},
+            {"label": "X100"},
+            {"label": "X250"},
+            {"label": "X500"},
+            {"label": "ALL"},
+          ])
         </ul>
       </div>
       <div class="second-heroes">

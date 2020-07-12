@@ -1,0 +1,256 @@
+@import 'variables';
+
+@mixin adaptive_for($modifier){
+  html,
+  body{
+    font-size: 18px*$modifier;
+  }
+
+  .action-bar{
+    grid-template-rows: 1fr 247px*$modifier;
+    grid-template-columns: 1fr 1278px*$modifier 1fr;
+    left: -16px*$modifier;
+
+    .control-center{
+      grid-template-columns:
+      85px*$modifier
+      141px*$modifier
+      1fr
+      164px*$modifier
+      62px*$modifier;
+    }
+  }
+  .control-center{
+    .center-stats{
+      grid-template-rows: 23px*$modifier 1fr 25px*$modifier;
+      grid-template-columns: 115px*$modifier 1fr;
+      margin: 28px*$modifier 10px*$modifier 6px*$modifier 20px*$modifier;
+    }
+    .main-hero{
+      padding: 0 7px*$modifier 7px*$modifier 0;
+    }
+    .second-heroes{
+      padding: 7px*$modifier 0 7px*$modifier;
+    }
+  }
+
+  .accelerators{
+    ul{
+      border-radius: 12px*$modifier;
+    }
+    li{
+      margin-right: 7px*$modifier;
+    }
+  }
+
+  .side-stats{
+    ul{
+      margin-top: 30px*$modifier;
+    }
+    li{
+      & + li{
+        margin-top: 6px*$modifier;
+      }
+    }
+    .icon{
+      margin: 0 3px*$modifier;
+
+      i{
+        width: 30px*$modifier;
+        height: 30px*$modifier;
+        margin-top: 3px*$modifier;
+        background-size: 26px*$modifier;
+        left: 2px*$modifier;
+      }
+    }
+  }
+
+  .mana.progress-wrapper{
+    margin-left: -3px*$modifier;
+  }
+  .mana{
+    .progress{
+      height: 34px*$modifier;
+      margin-top: 1px*$modifier;
+      border-radius: 18px*$modifier;
+
+      .val{
+        padding-left: 12px*$modifier;
+        border-radius: 18px*$modifier;
+
+        i{
+          width: 20px*$modifier;
+          background-size: 20px*$modifier;
+        }
+
+        div{
+          margin-left: 8px*$modifier;
+        }
+      }
+    }
+  }
+
+  .hp-bar{
+    .progress{
+      box-shadow: inset 0 40px*$modifier 0 -27px*$modifier #2c3b52;
+      border-radius: 6px*$modifier;
+    }
+    .bar-wrapper{
+      margin-left: -24px*$modifier;
+    }
+    .bar{
+      &:after{
+        width: 1px*$modifier;
+        border-width: 23px*$modifier 23px*$modifier 0 0;
+        margin-left: -1px*$modifier;
+      }
+    }
+  }
+
+  .character{
+    margin-right: 7px*$modifier;
+    border-radius: 12px*$modifier;
+    box-shadow: 0px 3px*$modifier 0px 0px #000;
+
+    &:before{
+      width: 20px*$modifier;
+      line-height: 20px*$modifier;
+    }
+    &:after{
+      border-radius: 12px*$modifier;
+    }
+
+    .wrapper{
+      grid-template-rows: 1fr 20px*$modifier 32px*$modifier;
+    }
+    .ava{
+      border-radius: 12px*$modifier 12px*$modifier 0 0;
+    }
+    .exp{
+      border-radius: 0 0 12px*$modifier 12px*$modifier;
+      box-shadow: inset 0 15px*$modifier 0 0 #b2bac2;
+
+      .icon{
+        width: 22px*$modifier;
+        height: 28px*$modifier;
+        background-size: 12px*$modifier;
+      }
+    }
+
+    .ability{
+      width: 45px*$modifier;
+      height: 45px*$modifier;
+      top: -4px*$modifier;
+      right: -4px*$modifier;
+
+      .img{
+        top: 2px*$modifier;
+        right: 2px*$modifier;
+        bottom: 2px*$modifier;
+        left: 2px*$modifier;
+      }
+    }
+
+    &.active .ability,
+    &:hover .ability{
+      top: -6px*$modifier;
+    }
+  }
+
+  .active-spells{
+    ul{
+      top: 14px*$modifier;
+      left: 12px*$modifier;
+    }
+    li{
+      width: 60px*$modifier;
+      height: 60px*$modifier;
+      margin: 0 6px*$modifier;
+    }
+
+    .data{
+      padding: 4px*$modifier;
+
+      .img{
+        box-shadow: 0 0 0 1px*$modifier #262523;
+      }
+    }
+  }
+
+  .bottom-buttons{
+    & > div{
+      bottom: 10px*$modifier;
+    }
+
+    .button{
+      margin-left: 22px*$modifier;
+      border-radius: 12px*$modifier;
+
+      .label{
+        padding: 8px*$modifier 16px*$modifier;
+      }
+
+      &.inventory{
+        .icon{
+          width: 114px*$modifier;
+          height: 95px*$modifier;
+          margin-left: -58px*$modifier;
+          margin-bottom: -5px*$modifier;
+        }
+
+        .label:after{
+          height: 10px*$modifier;
+          top: -1px*$modifier;
+        }
+      }
+
+      &.elixirs{
+        .icon {
+          width: 62px*$modifier;
+          height: 71px*$modifier;
+          margin-left: -36px*$modifier;
+          margin-bottom: -8px*$modifier;
+        }
+
+        .label:after{
+          height: 10px*$modifier;
+          top: -1px*$modifier;
+        }
+      }
+
+      &.shop{
+        margin-right: 22px*$modifier;
+
+        .icon{
+          width: 119px*$modifier;
+          height: 80px*$modifier;
+          margin-left: -65px*$modifier;
+          margin-bottom: -2px*$modifier;
+        }
+        .label{
+          padding: 4px*$modifier 16px*$modifier 8px*$modifier;
+
+          &:after {
+            padding: 4px*$modifier 16px*$modifier 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px){
+  @include adaptive_for($m_hd);
+}
+@media screen and (min-width: 1920px){
+  @include adaptive_for($m_fhd);
+}
+@media screen and (min-width: 2048px) {
+  @include adaptive_for($m_2k);
+}
+@media screen and (min-width: 3072px){
+  @include adaptive_for($m_3k);
+}
+@media screen and (min-width: 4096px){
+  @include adaptive_for($m_4k);
+}

@@ -10,7 +10,7 @@ body{
   font-family: 'RBNo3.1',HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
   overflow: hidden;
   font-weight: 400;
-  font-size: 18px*$multiplier;
+  font-size: 18px*$m_mobile;
 }
 
 ul, ol{
@@ -25,9 +25,11 @@ a{
 
 @import "base";
 @import "action-bar";
+@import "accelerator";
 @import "side-stats";
 @import "mana-bar";
 @import "hp-bar";
 @import "character";
 @import "spell";
 @import "bottom-buttons";
+@import "adaptive";
