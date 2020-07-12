@@ -41,6 +41,11 @@
     li{
       margin-right: 7px*$modifier;
     }
+    a{
+      small{
+        top: 3px*$modifier;
+      }
+    }
   }
 
   .side-stats{
