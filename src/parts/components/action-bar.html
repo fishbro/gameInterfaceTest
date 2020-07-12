@@ -73,7 +73,7 @@
           'exp': '1,257',
         })
         @@include('./character.html', {
-          'class': '',
+          'class': 'active',
           'img': './img/character__4.png',
           'ability': './img/ability__1.png',
           'lvl': '998',
@@ -108,9 +108,14 @@
             "plus": "+52M%"
           }
         ])
-        <li>
-
-        </li>
+        @@loop('./mana-bar.html', [
+          {
+            "icon": "./img/icon__mana.png" ,
+            "percent": "40",
+            "val": "569,658",
+            "from": "600,050"
+          }
+        ])
       </ul>
     </div>
   </div>

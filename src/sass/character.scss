@@ -106,6 +106,15 @@
     .label{
       color: #686d8b;
     }
+
+    .icon{
+      background-image: url("../img/icon__lvl-up.png");
+      width: 22px*$multiplier;
+      height: 28px*$multiplier;
+      background-size: 12px*$multiplier;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .ability{
@@ -171,6 +180,10 @@
     .exp{
       background: #feae00;
       box-shadow: none;
+
+      .icon{
+        background-image: url("../img/icon__main--lvl-up.png");
+      }
     }
   }
 }
