@@ -23,25 +23,29 @@
   a{
     background: #3f4558;
     color: #000000;
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
     font-size: 1.1rem;
-    line-height: 1em;
+    line-height: .6em;
 
     transition: all .3s;
 
     small{
       display: inline-block;
       font-size: .9rem;
-      position: relative;
-      top: 3px*$m_mobile;
+      line-height: 1em;
       overflow: hidden;
       max-width: 0;
       margin-right: 0;
 
       transition: margin-right .3s, max-width .3s;
+    }
+
+    span{
+      display: inline-block;
     }
 
     &.active,
